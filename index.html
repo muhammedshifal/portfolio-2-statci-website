@@ -8,7 +8,8 @@
     <link rel="icon" href="fav.jpg" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Muhammed Shifal</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
@@ -41,7 +42,7 @@
               <a class="nav-link px-lg-4 rounded" href="#service-section">Service</a> 
               </li>
               <li class="nav-item">        
-              <a class="nav-link px-lg-4 rounded" href="#contactme-section">Contact Me</a>
+              <a class="nav-link px-lg-4 rounded" href="#contact-section">Contact Me</a>
               </li>
             </ul>
          </div>   
@@ -171,36 +172,26 @@
 
     </section>
     
-    <section class="contactme" id="contactme-section">
-            <h1 class="title">Contact Me</h1>
-            <div class="container" id="signupform">
-                <div class="contact-form row">
-                    
-
-                    <div class="form-field col-lg-6">
-                        <input id="name" class="input-text" type="text" name="fname">
-                        <label for="name" class="label">name</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="email" class="input-text" type="email" name="emailaddress">
-                        <label for="email" class="label">email</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="phone" class="input-text" type="text" name="contactnumber">
-                        <label for="phone" class="label">Contact Number</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="message" class="input-text" type="text" name="textarea">
-                        <label for="message" class="label">message</label>
-                    </div> <div class="form-field col-lg-12">
-                        <input class="submit-btn" value="submit" type="submit" name="submit">
-                    </div>
-                </div>
-           
-            </div>
-                
-
-    </section>
+    <section id="contact-section">
+        <h1 class="rooms">Contact Us</h1>
+        <div class="container">
+          <div class="row py-5 ">
+        <div class="contact-wrap">
+          <div class="contact-in">
+            <h1>Send A Message</h1>
+            <form id="signupform" action="">
+              <input name="name" type="text" class="contact-in-input" placeholder="Your Name">
+                  <input name="email" type="email" class="contact-in-input" placeholder="Your Email">
+                  <input name="subject" type="text" class="contact-in-input" placeholder="Subject">
+                  <textarea name="message" type="text" class="contact-in-textarea" placeholder="Your Message"></textarea>
+            <button name="okdone" type="submit" class="contact-in-submit">Submit</button>
+          </form>
+          </div>
+         
+        </div>
+  
+      </section>  
+  
 
 
     <section class="footer">

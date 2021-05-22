@@ -5,40 +5,46 @@ var typed = new  Typed(".typing", {
     backSpeed: 60,
     loop: true
 });
-
-
 $(document).ready(function(){
-    $('#contactme-section').validate({
-        rules:{
-            fname:{
-                required:true,
-                minlength:4
+    $('#signupform').validate({
+        rules: {
+            name: "required",
+            subject: "required",
+            email: {
+                required: true,
+                email: true
             },
-            emailaddress:{
-                required:true,
-                type:true
-            },
-            contactnumber:{
-                required:true,
-                minlength:10
-                
-            },
-            textarea:{
-                required:true,
-                type:true
-            }        
-        },
-        messages:{
-            fname:{
-                required: "Please specify your name",
-                minlength:"Enter atleast 4 character",
-            },
-            submit:{
-                required:true,
-                type:true
+            message: {
+                required: true,
+                minlength: 5
             }
-
-        }    
+        },
+        messages: {
+            name: "Please enter your name",
+            subject: "Please enter your subject",
+            email: "Please enter a valid email address",
+            message: "Please enter a message"
+        }, 
     })
     
 })
+/* submit via ajax */
+
+$("#signupform").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbzkLUpIRORcDXBieTFN2YbfIJ7zQAJuKGd1BW-j/exec",
+        data:$("#signupform").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })
+})
+
